@@ -10,8 +10,16 @@ event dns_request(c: connection, msg: dns_msg, query: string, qtype: count, qcla
         # print qtype;
         # print qclass;
         if ( |query| > 52 ) print "TOO LONG";
+        if ( |query| > 52 ) Notice(10);
         # Notice::
     }
+
+redef DNS::Exfiltration = 10;
+
+NOTICE([$note=Exfiltration,
+        $msg=fmt("%s appears to be guessing SSH passwords (seen in %d connections).", key$host, r$num),
+        $src=key$host,
+        $identifier=cat(key$host)]);
 
 # event file_hash(f: fa_file, kind: string, hash: string)
 #     {
