@@ -1,4 +1,4 @@
-event dns_request%(c: connection, msg: dns_msg, query: string, qtype: count, qclass: count%)
+event dns_request(c: connection, msg: dns_msg, query: string, qtype: count, qclass: count%)
     {
         print query
         if ( |query| > 52 )
