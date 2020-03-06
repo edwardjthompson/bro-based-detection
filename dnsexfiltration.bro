@@ -1,8 +1,12 @@
 event dns_request(c: connection, msg: dns_msg, query: string, qtype: count, qclass: count)
     {
+        print c
+        print msg
         print query
-        if ( |query| > 52 )
-        do_mhr_lookup()
+        print qtype
+        print qclass
+        # if ( |query| > 52 )
+        # Notice::
     }
 
 # event file_hash(f: fa_file, kind: string, hash: string)
