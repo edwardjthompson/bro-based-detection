@@ -1,11 +1,12 @@
 event dns_request(c: connection, msg: dns_msg, query: string, qtype: count, qclass: count)
     {
-        print "c\n";
-        print c;
-        print "msg\n";
-        print msg;
-        print "query\n";
+        # print "c\n";
+        # print c;
+        # print "msg\n";
+        # print msg;
+        # print "query\n";
         print query;
+        print |query|;
         # print qtype;
         # print qclass;
         # if ( |query| > 52 )
