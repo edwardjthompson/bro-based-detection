@@ -1,4 +1,4 @@
-type DNS::Exfiltration;
+type DNS::Exfiltration
 
 NOTICE([$note=DNS::Exfiltration,
         $msg="DNS Query too long",
