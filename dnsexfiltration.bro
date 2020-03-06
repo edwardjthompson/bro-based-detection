@@ -1,4 +1,4 @@
-type DNS::Exfiltration
+# type DNS::Exfiltration
 
 event dns_request(c: connection, msg: dns_msg, query: string, qtype: count, qclass: count)
     {
