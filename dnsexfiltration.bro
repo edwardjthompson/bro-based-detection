@@ -4,11 +4,11 @@ event dns_request(c: connection, msg: dns_msg, query: string, qtype: count, qcla
     {
         # print c;
         print query;
-        print |query|;
-        if ( |query| > 52 ) print "TOO LONG";
+        # print |query|;
         if ( |query| > 52 ) {
-            print c$id;
-            print query;
+            print "TOO LONG";
+            print |query|;
+            print c$id$orig_h;
         }
         # if ( |query| > 52 ) {
         #     NOTICE([$note=DNS::Exfiltration,
