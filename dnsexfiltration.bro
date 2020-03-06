@@ -1,7 +1,7 @@
 # redef DNS::Exfiltration = 10;
 
 NOTICE([$note=10,
-        $msg="DNS Query too long"),
+        $msg="DNS Query too long",
         $src="src",
         $identifier="id"]);
 
