@@ -1,9 +1,9 @@
 # redef DNS::Exfiltration = 10;
 
 NOTICE([$note=10,
-        $msg=fmt("%s appears to be guessing SSH passwords (seen in %d connections).", key$host, r$num),
-        $src=key$host,
-        $identifier=cat(key$host)]);
+        $msg="DNS Query too long"),
+        $src="src",
+        $identifier="id"]);
 
 
 event dns_request(c: connection, msg: dns_msg, query: string, qtype: count, qclass: count)
