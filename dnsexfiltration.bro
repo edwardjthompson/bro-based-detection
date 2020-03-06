@@ -9,7 +9,7 @@ event dns_request(c: connection, msg: dns_msg, query: string, qtype: count, qcla
         print |query|;
         # print qtype;
         # print qclass;
-        # if ( |query| > 52 )
+        if ( |query| > 52 ) print "TOO LONG";
         # Notice::
     }
 
