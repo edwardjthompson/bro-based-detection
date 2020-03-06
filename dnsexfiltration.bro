@@ -1,6 +1,6 @@
-redef DNS::Exfiltration = 10;
+# redef DNS::Exfiltration = 10;
 
-NOTICE([$note=Exfiltration,
+NOTICE([$note=10,
         $msg=fmt("%s appears to be guessing SSH passwords (seen in %d connections).", key$host, r$num),
         $src=key$host,
         $identifier=cat(key$host)]);
