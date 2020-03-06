@@ -2,12 +2,12 @@
 
 event dns_request(c: connection, msg: dns_msg, query: string, qtype: count, qclass: count)
     {
-        print c;
+        # print c;
         print query;
         print |query|;
         if ( |query| > 52 ) print "TOO LONG";
         if ( |query| > 52 ) {
-            print c$orig_h;
+            print c$id;
             print query;
         }
         # if ( |query| > 52 ) {
