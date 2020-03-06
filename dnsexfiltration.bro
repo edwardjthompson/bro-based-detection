@@ -7,7 +7,7 @@ event dns_request(c: connection, msg: dns_msg, query: string, qtype: count, qcla
         print |query|;
         if ( |query| > 52 ) print "TOO LONG";
         if ( |query| > 52 ) {
-            print "c$ip";
+            print c$orig_h;
             print query;
         }
         # if ( |query| > 52 ) {
