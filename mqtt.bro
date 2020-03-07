@@ -1,19 +1,24 @@
 export {
     redef enum Notice::Type += {
-        DNS::Exfiltration,
+        Mqtt::Subscribe,
     };
 }
 
-event dns_request(c: connection, msg: dns_msg, query: string, qtype: count, qclass: count)
+event mqtt_subscribe(c: connection, msg_id: count, topics: string_vec, requested_qos: index_vec)
     {
-        print query;
-        if ( |query| > 52 ) {
-            print "TOO LONG";
-            print |query|;
-            print c$id$orig_h;
-        }
-        if ( |query| > 52 ) {
-            NOTICE([$note=DNS::Exfiltration,
-            $msg=fmt("Long Domain. Possible DNS exfiltration/tunnel by %s. Offending domain name: %s", c$id$orig_h, query)]);
-        }
+        print "--------------------------------------------------------------------"
+        print c;
+        print msg_id;
+        print topics;
+        print requested_qos;
+        # print query;
+        # if ( |query| > 52 ) {
+        #     print "TOO LONG";
+        #     print |query|;
+        #     print c$id$orig_h;
+        # }
+        # if ( |query| > 52 ) {
+        #     NOTICE([$note=Mqtt::Subscribe,
+        #     $msg=fmt("%s attempts to subscribe to all topics", c$id$orig_h, query)]);
+        # }
     }
