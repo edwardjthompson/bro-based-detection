@@ -6,7 +6,7 @@ export {
 
 event mqtt_subscribe(c: connection, msg_id: count, topics: string_vec, requested_qos: index_vec)
     {
-        print "--------------------------------------------------------------------"
+        print "--------------------------------------------------------------------";
         print c;
         print msg_id;
         print topics;
