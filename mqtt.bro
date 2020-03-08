@@ -2,21 +2,23 @@ global i = 1;
 event packet_contents(c: connection, contents: string)
     {   
         print i, contents;
+        local total_length = |contents|;
+        print "total contents length", total_length;
         if (bytestring_to_count(contents[0]) == 0x82) {
             print "This is a subscribe MQTT";
             local j = 0;
             for (x in contents) {
-                print j, x;
+                # print j, x;
                 j += 1;
             }
             local position = 1;
-            while (T) {
-                print "while";
+            while (position < total_length-2) {
                 local length = contents[position];
-                print bytestring_to_count(length);
-                break;
+                position += (bytestring_to_count(length) + 2);
+                print "pos",position;
+                if (position == total_length + 1) {
+                    print "Perfect Length";
+                }
             }
-            
-            
         }
     }
