@@ -1,10 +1,10 @@
 global i = 1;
 event packet_contents(c: connection, contents: string)
     {   
-        print i, contents;
+        # print i, contents;
         i += 1;
         local total_length = |contents|;
-        print "total contents length", total_length;
+        # print "total contents length", total_length;
         if (bytestring_to_count(contents[0]) == 0x82) {
             # print "This is a subscribe MQTT";
             local j = 0;
