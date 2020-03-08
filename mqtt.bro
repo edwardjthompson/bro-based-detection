@@ -18,13 +18,14 @@ event loq_mqtt(ts: time)
 event new_packet(c: connection, p: pkt_hdr)
     {   
         print "\n***********new packet*************";
-        print c;
+        # print c;
         print "\n***********header*****************";
-        print p;
+        # print p;
     }
 
 event packet_contents(c: connection, contents: string)
     {   
         print "\n***********content*****************";
         print contents;
+        print sub_bytes(contents, 3, 1);
     }
