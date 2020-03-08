@@ -41,3 +41,11 @@ event new_packet(c: connection, p: pkt_hdr)
         print "***********header*****************";
         print p;
     }
+
+event packet_contents(c: connection, contents: string)
+    {   
+        print "***********new packet*************";
+        print c;
+        print "***********content*****************";
+        print contents;
+    }
