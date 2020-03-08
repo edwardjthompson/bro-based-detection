@@ -4,13 +4,13 @@ export {
     };
 }
 
-event mqtt_subscribe(c: connection, msg_id: count, topics: string_vec, requested_qos: index_vec)
+event mqtt_connect(c: connection, msg: MQTT::ConnectMsg)
     {
         print "--------------------------------------------------------------------";
         print c;
-        print msg_id;
-        print topics;
-        print requested_qos;
+        print msg;
+        # print topics;
+        # print requested_qos;
         # print query;
         # if ( |query| > 52 ) {
         #     print "TOO LONG";
