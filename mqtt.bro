@@ -1,3 +1,9 @@
+export {
+    redef enum Notice::Type += {
+        Mqtt::Subscribe,
+    };
+}
+
 global i = 1;
 event packet_contents(c: connection, contents: string)
     {   
@@ -16,21 +22,23 @@ event packet_contents(c: connection, contents: string)
             while (position < total_length-2) {
                 local length = contents[position];
                 position += (bytestring_to_count(length) + 2);
-                print "pos",position;
+                # print "pos",position;
                 if (position == total_length + 1) {
-                    print "Perfect Length";
+                    # print "Perfect Length";
                 } else if (position > total_length){
-                    print "invalid length";
+                    # print "invalid length";
                     return;
                 }
             }
             position = 1;
+            local sub_all = F;
             while (position < total_length-2) {
                 local l = contents[position];
                 position += (bytestring_to_count(l) + 2);
-                # print "pos",position;
-                if (position == total_length + 1) {
-                    # print "Perfect Length";
+                # print "contents[pos-1]", contents[position-3], position-3;
+                if (contents[position-3] == "#") {
+                    NOTICE([$note=Mqtt::Subscribe,
+                    $msg=fmt("%s attempts to subscribe to all topics.", c$id$orig_h)]);
                 }
             }
         }
