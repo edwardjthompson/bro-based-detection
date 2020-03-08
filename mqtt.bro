@@ -4,7 +4,7 @@
 #     };
 # }
 
-event mqtt_connect(c: connection, msg: MQTT::ConnectMsg)
+event mqtt_connect(c: connection, msg: time)
     {
         print "------------------------------connect-----------------------------------";
         print c;
