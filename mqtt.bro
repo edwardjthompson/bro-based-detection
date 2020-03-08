@@ -36,7 +36,8 @@ event loq_mqtt(ts: time)
 
 event new_packet(c: connection, p: pkt_hdr)
     {   
-        print "new packet";
+        print "***********new packet*************";
         print c;
+        print "***********header*****************";
         print p;
     }
