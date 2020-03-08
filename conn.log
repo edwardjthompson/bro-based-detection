@@ -3,9 +3,9 @@
 #empty_field	(empty)
 #unset_field	-
 #path	conn
-#open	2020-03-07-16-49-47
+#open	2020-03-07-18-40-07
 #fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents
 #types	time	string	addr	port	addr	port	enum	string	interval	count	count	string	bool	bool	count	string	count	count	count	count	set[string]
-1461170596.653525	Cy5x5w18A15zLv8wmd	10.0.1.4	49330	198.41.30.241	1883	tcp	-	0.228828	66	4	SH	-	-	0	DFd	2	170	1	56	-
-1461170590.509491	CDf7wMSQTzm4rQOD9	10.0.1.4	49327	198.41.30.241	1883	tcp	-	27.640602	67	94	OTH	-	-	0	Dd	7	431	9	562	-
-#close	2020-03-07-16-49-47
+1461170596.653525	Crg4gC1Dreqg8fSA91	10.0.1.4	49330	198.41.30.241	1883	tcp	-	0.228828	66	4	SH	-	-	0	DFd	2	170	1	56	-
+1461170590.509491	CNfk9414WbC5ZeSvX5	10.0.1.4	49327	198.41.30.241	1883	tcp	-	27.640602	67	94	OTH	-	-	0	Dd	7	431	9	562	-
+#close	2020-03-07-18-40-07

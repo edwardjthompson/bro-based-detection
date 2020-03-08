@@ -3,8 +3,8 @@
 #empty_field	(empty)
 #unset_field	-
 #path	weird
-#open	2020-03-07-16-32-58
+#open	2020-03-07-17-39-36
 #fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	name	addl	notice	peer
 #types	time	string	addr	port	addr	port	string	string	bool	string
-1516225203.362357	CLqRx63b5o9tYe3fB1	140.160.140.131	40066	37.187.106.16	1883	bad_TCP_checksum	-	F	zeek
-#close	2020-03-07-16-32-58
+1516225203.362357	CWHyi74hHHHnukH0z1	140.160.140.131	40066	37.187.106.16	1883	bad_TCP_checksum	-	F	zeek
+#close	2020-03-07-17-39-36
